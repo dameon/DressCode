@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -199,7 +199,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="ev3-Dc-wSC" customClass="ItemCell" customModule="DressCode" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="23" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -327,8 +327,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cRq-2x-wvi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cRq-2x-wvi">
                                 <rect key="frame" x="36" y="103" width="307" height="324"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="324" id="nCm-cF-4z3"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter brief description here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lxm-Ym-xO5">
                                 <rect key="frame" x="36" y="42" width="307" height="30"/>
@@ -375,21 +378,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cRq-2x-wvi" firstAttribute="centerX" secondItem="Z14-zb-I8c" secondAttribute="centerX" id="2y7-mJ-W3d"/>
                             <constraint firstItem="lxm-Ym-xO5" firstAttribute="leading" secondItem="7sV-7h-HPk" secondAttribute="leadingMargin" constant="20" id="6Ej-aS-W22"/>
                             <constraint firstItem="Z14-zb-I8c" firstAttribute="leading" secondItem="7sV-7h-HPk" secondAttribute="leading" id="GYc-MC-ajm"/>
                             <constraint firstItem="Z14-zb-I8c" firstAttribute="leading" secondItem="C8C-Hf-btc" secondAttribute="leading" id="Gdg-H1-0Xw"/>
-                            <constraint firstItem="lxm-Ym-xO5" firstAttribute="leading" secondItem="cRq-2x-wvi" secondAttribute="leading" id="Oqq-nO-JM3"/>
-                            <constraint firstItem="cRq-2x-wvi" firstAttribute="top" secondItem="lxm-Ym-xO5" secondAttribute="bottom" constant="31" id="UG1-AT-RVG"/>
+                            <constraint firstItem="cRq-2x-wvi" firstAttribute="trailing" secondItem="lxm-Ym-xO5" secondAttribute="trailing" id="Vfd-07-S1J"/>
                             <constraint firstItem="Z14-zb-I8c" firstAttribute="trailing" secondItem="C8C-Hf-btc" secondAttribute="trailing" id="Yfc-oc-cbu"/>
+                            <constraint firstItem="cRq-2x-wvi" firstAttribute="centerX" secondItem="Z14-zb-I8c" secondAttribute="centerX" id="Zsc-G4-ga0"/>
                             <constraint firstItem="1IK-iE-mht" firstAttribute="top" secondItem="C8C-Hf-btc" secondAttribute="bottom" id="a4A-40-dnW"/>
                             <constraint firstItem="C8C-Hf-btc" firstAttribute="leading" secondItem="7sV-7h-HPk" secondAttribute="leadingMargin" constant="-20" id="bhI-tJ-Qia"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C8C-Hf-btc" secondAttribute="trailing" constant="-20" id="dO3-E9-oS4"/>
                             <constraint firstItem="lxm-Ym-xO5" firstAttribute="top" secondItem="JLI-26-GuB" secondAttribute="bottom" constant="22" id="ffa-h2-X09"/>
+                            <constraint firstItem="Z14-zb-I8c" firstAttribute="top" secondItem="cRq-2x-wvi" secondAttribute="bottom" constant="29" id="iYA-GK-L4z"/>
                             <constraint firstItem="C8C-Hf-btc" firstAttribute="top" secondItem="Z14-zb-I8c" secondAttribute="bottom" constant="37" id="jrP-hf-2Bt"/>
                             <constraint firstItem="C8C-Hf-btc" firstAttribute="bottom" secondItem="1IK-iE-mht" secondAttribute="top" id="mgg-F1-JCk"/>
-                            <constraint firstItem="lxm-Ym-xO5" firstAttribute="trailing" secondItem="cRq-2x-wvi" secondAttribute="trailing" id="twe-SH-eSS"/>
-                            <constraint firstItem="Z14-zb-I8c" firstAttribute="top" secondItem="cRq-2x-wvi" secondAttribute="bottom" constant="29" id="wdW-3e-Cyt"/>
+                            <constraint firstItem="cRq-2x-wvi" firstAttribute="leading" secondItem="lxm-Ym-xO5" secondAttribute="leading" id="uPY-2l-YoJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -488,6 +490,7 @@
         <image name="Closet" width="800" height="500"/>
         <image name="closet-1" width="25" height="25"/>
         <image name="event" width="25" height="25"/>
+        <image name="placeholder" width="420" height="420"/>
         <image name="stackedclother" width="25" height="25"/>
     </resources>
 </document>
