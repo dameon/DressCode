@@ -118,17 +118,20 @@ class AddItemViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let imagePicker = UIImagePickerController()
         
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+        imagePicker.sourceType = UIImagePickerController.SourceType.camera
         imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
         
         self.present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         
         self.dismiss(animated: true, completion: nil)
         let image =
-            info[UIImagePickerControllerOriginalImage] as! UIImage
+            info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as! UIImage
         imageView.image = image
         photoURL = saveImageToFile(image)
     }
@@ -161,7 +164,7 @@ class AddItemViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let filePath =
             docsDir.appendingPathComponent("currentImage.png") as String
         
-        try? UIImageJPEGRepresentation(image, 0.5)!.write(to: URL(fileURLWithPath: filePath),
+        try? image.jpegData(compressionQuality: 0.5)!.write(to: URL(fileURLWithPath: filePath),
                                                            options: [.atomic])
         
         return URL(fileURLWithPath: filePath)
@@ -171,7 +174,7 @@ class AddItemViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     {
         let alert = UIAlertController(title: title,
                                       message: message,
-                                      preferredStyle: UIAlertControllerStyle.alert)
+                                      preferredStyle: UIAlertController.Style.alert)
         
         let cancelAction = UIAlertAction(title: "OK",
                                          style: .cancel, handler: nil)
@@ -222,4 +225,14 @@ class AddItemViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         descTextField.endEditing(true)
         //commentsField.endEditing(true)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }
