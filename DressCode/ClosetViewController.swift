@@ -182,7 +182,7 @@ extension ClosetViewController: UICollectionViewDelegate, UICollectionViewDataSo
         func setImage(_ items: [CKRecord]) {
             let record = items[indexPath.row]
             if let asset = record.value(forKey: "photo") as? CKAsset {
-                cell.itemImage.sd_setImage(with: asset.fileURL)
+                cell.itemImage.sd_setImage(with: asset.fileURL!)
             }
         }
         

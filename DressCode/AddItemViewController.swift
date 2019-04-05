@@ -98,7 +98,7 @@ class AddItemViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                                                         record.object(forKey: "photo") as! CKAsset
                                                     
                                                     let image = UIImage(contentsOfFile:
-                                                        photo.fileURL.path)
+                                                        photo.fileURL!.path)
                                                     
                                                     self.imageView.image = image
                                                     self.photoURL = self.saveImageToFile(image!)
