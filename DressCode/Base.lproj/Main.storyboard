@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,13 +28,13 @@
                                 <rect key="frame" x="0.0" y="543" width="375" height="124"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iy4-I4-lqP">
-                                        <rect key="frame" x="27" y="8" width="320" height="50"/>
+                                        <rect key="frame" x="27.5" y="8" width="320" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="cv2-jD-i42"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7C-tI-JCH" customClass="GIDSignInButton">
-                                        <rect key="frame" x="28" y="66" width="320" height="50"/>
+                                        <rect key="frame" x="27.5" y="66" width="320" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" placeholder="YES" id="JfG-AP-MpZ"/>
                                             <constraint firstAttribute="height" constant="50" placeholder="YES" id="nYu-sh-zL5"/>
@@ -58,7 +55,7 @@
                         <constraints>
                             <constraint firstItem="IW9-rk-gVo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1hD-KV-XCN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IW9-rk-gVo" secondAttribute="bottom" id="Kp1-IA-vCw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QOC-tU-pE7" secondAttribute="bottom" id="Lnx-1X-siW"/>
+                            <constraint firstAttribute="bottom" secondItem="QOC-tU-pE7" secondAttribute="bottom" id="Lnx-1X-siW"/>
                             <constraint firstAttribute="trailing" secondItem="IW9-rk-gVo" secondAttribute="trailing" id="PCY-VJ-oqs"/>
                             <constraint firstAttribute="trailing" secondItem="QOC-tU-pE7" secondAttribute="trailing" id="WDB-11-Aag"/>
                             <constraint firstItem="QOC-tU-pE7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bfB-GC-BcG"/>
@@ -442,15 +439,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vq-a2-Pyq">
-                                <rect key="frame" x="45" y="245" width="285" height="178.5"/>
+                                <rect key="frame" x="45" y="244.5" width="285" height="178"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-MM-aTE">
-                                        <rect key="frame" x="8" y="8" width="268" height="20"/>
+                                        <rect key="frame" x="8" y="8" width="269" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="HnO-nt-Jmh">
-                                        <rect key="frame" x="0.0" y="36" width="285" height="142.5"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="285" height="142.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HnO-nt-Jmh" secondAttribute="height" multiplier="2:1" placeholder="YES" id="6U1-7G-6mV"/>
                                         </constraints>
